@@ -26,6 +26,8 @@ jobs:
       - run:  
           name: Run Playwright tests
           command: npx playwright test login.spec.ts --project=chromium
+      - store_test_results:
+          path: playwright-report/
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
