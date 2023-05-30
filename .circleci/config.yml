@@ -26,7 +26,7 @@ jobs:
       - run:  
           name: Run Playwright tests
           command: npx playwright test login.spec.ts --project=chromium
-      - store_test_results:
+      - store_artifacts:
           path: playwright-report/
 
 # Orchestrate jobs using workflows
